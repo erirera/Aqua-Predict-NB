@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NB AI Groundwater Risk Dashboard</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- SEO best practices -->
+    <meta name="description" content="Interactive AI-driven dashboard for forecasting groundwater level risks and water quality in New Brunswick private wells.">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-droplet icon-logo"></i>
+                <h2>AquaPredict NB</h2>
+            </div>
+            <p class="subtitle">AI Groundwater Forecasting</p>
+            
+            <div class="nav-menu">
+                <a href="#" class="nav-item active" id="nav-proposal"><i class="fa-solid fa-file-contract"></i> Research Proposal</a>
+                <a href="#" class="nav-item" id="nav-overview"><i class="fa-solid fa-chart-line"></i> Dashboard View</a>
+            </div>
+
+            <div class="filters">
+                <h3>Filters</h3>
+                <div class="filter-group">
+                    <label>Risk Level</label>
+                    <select id="risk-filter">
+                        <option value="all">All Wells</option>
+                        <option value="high">High Drought Risk</option>
+                        <option value="medium">Medium Risk</option>
+                        <option value="low">Low Risk</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Water Quality Threat</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="qa-arsenic" checked> Arsenic Overlay</label>
+                        <label><input type="checkbox" id="qa-uranium" checked> Uranium Overlay</label>
+                        <label><input type="checkbox" id="qa-methane" checked> Methane Overlay</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Forecast Horizon</label>
+                    <input type="range" id="forecast-range" min="1" max="6" value="3" oninput="document.getElementById('fw-val').innerText = this.value + ' Months'">
+                    <span id="fw-val" class="range-val">3 Months</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search by well ID or region..." id="search-input">
+                </div>
+                <div class="header-actions">
+                    <span class="status-indicator"><i class="fa-solid fa-circle blink"></i> Live AI Model (LSTM)</span>
+                    <button class="btn-primary" id="export-report"><i class="fa-solid fa-download"></i> Export Report</button>
+                </div>
+            </header>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon blue"><i class="fa-solid fa-water"></i></div>
+                    <div class="metric-info">
+                        <h3>Total Wells Monitored</h3>
+                        <p class="value" id="val-total">4,285</p>
+                    </div>
+                </div>
+                <div class="metric-card alert">
+                    <div class="metric-icon red"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="metric-info">
+                        <h3>High Drought Risk (1-3 Mo)</h3>
+                        <p class="value" id="val-drought">312</p>
+                    </div>
+                </div>
+                <div class="metric-card warning">
+                    <div class="metric-icon orange"><i class="fa-solid fa-biohazard"></i></div>
+                    <div class="metric-info">
+                        <h3>Combined Geo-Risk</h3>
+                        <p class="value" id="val-georisk">145</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon green"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <div class="metric-info">
+                        <h3>LSTM Accuracy (RMSE)</h3>
+                        <p class="value">0.18m</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid hidden" id="main-content-grid">
+                <!-- Map Section -->
+                <div class="card map-card col-span-2">
+                    <div class="card-header">
+                        <h2 id="mapHeading">NB Private Wells Spatial Distribution & Forecast Risks</h2>
+                    </div>
+                    <div id="map-container" class="map-container"></div>
+                </div>
+
+                <!-- Analysis / Details Section -->
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h2>Well Forecast Analysis</h2>
+                    </div>
+                    <div class="chart-container-inner" id="well-details">
+                        <div class="empty-state" id="chart-empty-state">
+                            <i class="fa-solid fa-hand-pointer"></i>
+                            <p>Select a well on the map to view LSTM forecast details</p>
+                        </div>
+                        <div class="well-data-view hidden" id="well-data-view">
+                            <div class="well-meta">
+                                <h3 id="detail-well-id">Well NB-OWLS-902</h3>
+                                <span class="badge" id="detail-risk-badge">High Risk</span>
+                            </div>
+                            <div class="well-stats">
+                                <div class="stat"><span class="label">Depth:</span> <span id="detail-depth">120m</span></div>
+                                <div class="stat"><span class="label">Aquifer:</span> <span id="detail-aquifer">Fractured Bedrock</span></div>
+                                <div class="stat"><span class="label">Quality Flags:</span> <span id="detail-quality">Arsenic</span></div>
+                            </div>
+                            <div class="canvas-wrapper">
+                                <canvas id="forecastChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proposal Document View -->
+            <div class="proposal-view" id="proposal-view">
+                <div class="proposal-header">
+                    <span class="proposal-badge">MODERATE-HIGH NOVELTY</span>
+                    <h1>PROPOSAL 3: Groundwater Level Prediction for NB Private Wells</h1>
+                    <p class="subtitle-large">LSTM Forecasting with Drought-Stress and Water Quality Risk Integration</p>
+                </div>
+                
+                <div class="proposal-card">
+                    <h2><i class="fa-solid fa-book-open"></i> 3.1 Background & Motivation</h2>
+                    <p>Over 60% of New Brunswick's population relies on groundwater for drinking water — including more than 100,000 private well users and 55 municipal well fields. Yet NB has no AI-driven groundwater level forecasting system. The NB Online Well Log System (OWLS) has accumulated over 30 years of water well records since 1994, providing a rich, province-wide time series dataset that has never been used for machine learning-based prediction.</p>
+                    <p>Critically, NB's fractured bedrock aquifers — the dominant aquifer type in the Appalachian zone covering most of the province — are particularly vulnerable to seasonal drought and long-term climate-driven recharge reduction. Private well owners have no tool to anticipate whether their well will run dry during a drought year. This research directly addresses that gap.</p>
+                </div>
+
+                <div class="proposal-card">
+                    <h2><i class="fa-solid fa-bullseye"></i> 3.2 Research Objectives</h2>
+                    <ul class="proposal-list">
+                        <li>Build an LSTM-based groundwater level (GWL) forecasting model trained on NB OWLS well records and ECCC meteorological drivers.</li>
+                        <li>Forecast GWL 1–6 months ahead at individual wells, with prediction intervals quantifying drought-season risk.</li>
+                        <li>Identify NB wells at highest risk of seasonal water table drop below the pump intake depth.</li>
+                        <li>Overlay AI-predicted low-GWL zones with the NB Groundwater Chemistry Atlas to flag wells where drought-induced concentration of arsenic, uranium, or methane becomes a public health concern.</li>
+                        <li>Produce a public-facing interactive risk map for NB private well owners.</li>
+                    </ul>
+                </div>
+
+                <div class="proposal-grid">
+                    <div class="proposal-card">
+                        <h2><i class="fa-solid fa-database"></i> 3.3 Data Sources</h2>
+                        <ul class="proposal-list">
+                            <li><strong>NB OWLS Database:</strong> Water well records since 1994 (depth, yield, quality).</li>
+                            <li><strong>ECCC Historical Climate:</strong> Monthly precipitation, temperature.</li>
+                            <li><strong>ERA5-Land (ECMWF):</strong> Gap-fill climate data.</li>
+                            <li><strong>NB Surficial Geology:</strong> Quaternary deposit controls.</li>
+                            <li><strong>NB Groundwater Chemistry Atlas:</strong> Arsenic, uranium, methane risk zones.</li>
+                            <li><strong>CMIP6 SSP2-4.5 (PCIC):</strong> Climate projections for NB to 2050.</li>
+                        </ul>
+                    </div>
+                    <div class="proposal-card">
+                        <h2><i class="fa-solid fa-person-digging"></i> 3.5 Solo Researcher Feasibility</h2>
+                        <ul class="proposal-list">
+                            <li><strong>Python Hub:</strong> Pandas, NumPy, PyTorch (LSTM), scikit-learn.</li>
+                            <li><strong>Compute:</strong> Standard laptop CPU — LSTM training on tabular time series is fast.</li>
+                            <li><strong>Cost:</strong> $0 — all datasets are open access.</li>
+                            <li><strong>Duration:</strong> 5–7 months (Recommended first project).</li>
+                            <li><strong>Impact:</strong> Direct translation to public health forecasting dashboard.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="proposal-card">
+                    <h2><i class="fa-solid fa-diagram-project"></i> 3.4 Methodology</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Phase 1 — Dataset Construction (Months 1–2)</h3>
+                                <p>Extract OWLS wells with >= 5 years of records, align with ECCC climate data, compute 1/3/6-month lagged features, define 'dry risk' flag.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Phase 2 — Model Development (Months 2–4)</h3>
+                                <p>Train province-wide LSTM encoder-decoder with static covariates. Quantify uncertainty using quantile regression LSTM for 10th/50th/90th percentile forecasts.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Phase 3 — Risk Integration & Output (Months 4–6)</h3>
+                                <p>Identify high-drought-risk wells, spatially join with Groundwater Chemistry Atlas, build interactive Streamlit web app.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="proposal-footer">
+                    <button class="btn-primary btn-large" id="btn-view-dashboard">Try Interactive Dashboard Prototype <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
