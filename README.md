@@ -1,4 +1,4 @@
-# NB AI Groundwater Risk Dashboard (Proposal 3)
+# NB AI Groundwater Risk Dashboard Proposal
 
 This repository contains an interactive web dashboard for visualizing AI-driven groundwater level forecasting in New Brunswick (NB), based on "AI Research Proposal 3: Groundwater Level Prediction for NB Private Wells".
 
