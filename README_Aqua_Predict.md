@@ -129,7 +129,7 @@ Groundwater modelling sits at the intersection of hydrogeology, climate science,
 
 ## Author
 
-**Dele Falebita, PhD** — Exploration Geoscientist & Data Scientist  
+**Dele Falebita, PhD** — GIT APEGNB & Data Scientist  
 [github.com/erirera](https://github.com/erirera) | Moncton, New Brunswick, Canada
 
 ---
