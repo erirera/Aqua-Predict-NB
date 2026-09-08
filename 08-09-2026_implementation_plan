@@ -1,0 +1,224 @@
+# Complete End-to-End Pipelines for Aqua-Predict-NB
+
+This document details the architecture and implementation plan for building the complete production-grade pipelines for **Aqua-Predict-NB** (AI Groundwater Level Forecasting for New Brunswick Private Wells), translating the research proposal and architecture into fully functioning Python and web pipelines.
+
+---
+
+## User Review Required
+
+> [!IMPORTANT]
+> **PyTorch Installation**: PyTorch will be installed in your Python 3.14 environment via `pip install torch`.
+> 
+> **Data Generation & Ingestion Strategy**: Real New Brunswick Online Well Log System (OWLS) and ECCC climate stations span key New Brunswick hydrogeological regions (Fredericton, Moncton, Saint John, Miramichi, Bathurst, Edmundston, Sussex, etc.). The ingestion pipeline will implement realistic NB multi-basin data generation adhering strictly to the provincial hydrogeology (fractured bedrock, Carboniferous sandstones, Quaternary glaciofluvial, Windsor group karst, with geochemical risk overlays for Arsenic, Uranium, and Methane), alongside real ECCC climate station coordinates and meteorological characteristics.
+
+---
+
+## Architecture Overview
+
+```
+Aqua-Predict-NB Pipeline Architecture:
+├── Raw Data Ingestion (NB OWLS format + ECCC Climate Stations + NB Geological Survey)
+│     ├── Well construction: static water level, total depth, casing depth, lithology
+│     ├── Climate drivers: daily & monthly precipitation, temperature (mean/max/min), snowpack
+│     └── Geochemical overlays: Arsenic (mafic/slate), Uranium (granites), Methane (Carboniferous)
+│
+├── Feature Engineering & Hydrogeological Preprocessing
+│     ├── Rolling meteorological lag features (30d, 90d, 180d, 365d cumulative precipitation)
+│     ├── Standardized Precipitation Evapotranspiration (SPEI/SPI proxy) & Snowmelt recharge
+│     ├── Cyclical seasonal features (sin/cos of month and day of year)
+│     ├── Static well & geological embeddings (depth ratio, aquifer type, spatial coordinates)
+│     └── Sequence windowing (24-month lookback -> 6-month multi-step forecast)
+│
+├── PyTorch LSTM Model & Bayesian Uncertainty (MCDO)
+│     ├── Multivariate Seq2Seq LSTM with static covariate fusion
+│     ├── Monte Carlo Dropout (N=100 stochastic forward passes at inference)
+│     ├── Quantile / Pinball loss + MSE dual-objective training
+│     └── Hydrogeological validation metrics (NSE, KGE, RMSE, MAE, PICP, MPIW)
+│
+├── Risk Tiering & Multimodal Hazard Assessment
+│     ├── Drought risk classification (<10th %ile = High, 10-25th = Medium, >25th = Low)
+│     └── Joint Drought + Geochemical risk indexing (Arsenic, Uranium, Methane concentration risk)
+│
+├── Export & Visualizations Pipeline
+│     ├── High-resolution scientific figures & publication charts (`outputs/figures/`)
+│     ├── Automated serialization to GeoJSON / JSON (`data/processed_wells.json`)
+│     ├── Dynamic dashboard loading in `script.js` with live metrics sync
+│     └── Standalone CLI runner (`run_pipeline.py`) supporting modular stages
+│
+└── Test Suite
+      └── Automated pytest / unittest coverage for data, models, inference, and pipeline orchestration
+```
+
+---
+
+## Scientific Figure & Image Exports (`outputs/figures/`)
+
+The pipeline includes a dedicated visualization module (`src/export/export_figures.py`) generating publication-quality, 300 DPI figures and web-optimized images:
+
+1. **`outputs/figures/hydrographs_with_uncertainty.png`**:
+   - Multi-panel hydrograph comparisons for key New Brunswick aquifer types (Fractured Bedrock in Fredericton, Carboniferous Sandstone in Moncton, Glaciofluvial in Saint John).
+   - Shows historical observed groundwater levels, LSTM mean trajectory ($P_{50}$), shaded 10th–90th percentile Monte Carlo Dropout uncertainty envelopes, and pump intake critical drought thresholds.
+2. **`outputs/figures/provincial_drought_risk_map.png`**:
+   - High-resolution spatial map of New Brunswick showing all monitored private wells classified by drought risk tier (High / Medium / Low) with geological county boundaries.
+   - Secondary inset overlays displaying Arsenic, Uranium, and Methane geochemical hotspot zones.
+3. **`outputs/figures/training_validation_curves.png`**:
+   - Convergence plot tracking training vs. validation loss across epochs, learning rate reduction steps, and early stopping checkpoint.
+4. **`outputs/figures/meteorological_lag_correlations.png`**:
+   - Cross-correlation analysis comparing precipitation accumulation lags (30d, 90d, 180d, 365d) against water table response across shallow overburden vs. deep bedrock wells.
+5. **`outputs/figures/risk_tier_summary.png`**:
+   - Provincial risk breakdown infographic displaying the proportion of wells at risk, distribution of forecasted water level drops, and combined geochemical hazards.
+
+---
+
+## Proposed Changes
+
+### 1. Environment & Dependencies
+- Install `torch` via pip.
+- Add `requirements.txt` documenting all project dependencies (`torch`, `numpy`, `pandas`, `scipy`, `scikit-learn`, `geopandas`, `shapely`, `matplotlib`, `seaborn`, `pytest`).
+
+---
+
+### 2. Core Python Pipeline Package (`src/`)
+
+#### [NEW] [src/config.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/config.py)
+- Configuration dataclasses and constants:
+  - Filepaths: raw data, processed features, checkpoints, figure outputs, exported artifacts.
+  - Hydrogeological parameters: NB spatial bounds ($44.5^\circ-48.2^\circ$N, $-69.1^\circ--63.7^\circ$W), aquifer categories, geochemical risk thresholds.
+  - Model hyperparameters: `lookback_months=24`, `forecast_horizon=6`, `hidden_dim=128`, `num_layers=2`, `dropout=0.2`, `mc_samples=100`, `learning_rate=1e-3`, `batch_size=64`, `epochs=30`.
+
+#### [NEW] [src/data/ingestion.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/data/ingestion.py)
+- Ingestion engine for NB OWLS wells, ECCC climate records, and geological atlas:
+  - Generates/processes province-wide well records covering New Brunswick counties (York, Westmorland, Saint John, Northumberland, Gloucester, Madawaska, Kings, Carleton, etc.).
+  - Simulates/downloads multi-year monthly meteorological series for ECCC reference stations (Fredericton CDA, Moncton Airport, Saint John A, Bathurst A, Miramichi, St. Leonard).
+  - Assigns hydrogeological formations and geochemical threat indicators based on New Brunswick bedrock geology.
+
+#### [NEW] [src/data/preprocessing.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/data/preprocessing.py)
+- Feature engineering engine:
+  - Time series alignment between climate stations and nearest well locations (spatial KDTree/distance weighting).
+  - Rolling precipitation accumulations (30-day, 90-day, 180-day, 365-day) capturing shallow vs. deep bedrock lag responses.
+  - Cyclical harmonic temporal encoding ($\sin(2\pi m / 12), \cos(2\pi m / 12)$).
+  - Standardization and normalization with serializable scalers.
+
+#### [NEW] [src/data/dataset.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/data/dataset.py)
+- PyTorch `Dataset` and `DataLoader` classes:
+  - Windowing function slicing 24-month input sequences and 6-month target sequences.
+  - Batched static well metadata integration (well depth, casing depth, aquifer type one-hot).
+
+#### [NEW] [src/models/lstm_forecaster.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/models/lstm_forecaster.py)
+- PyTorch LSTM neural network:
+  - Dynamic sequence encoder (2-layer LSTM, 128 hidden units, dropout 0.2).
+  - Static covariate fusion layer (combines static geological/construction features with LSTM latent state).
+  - Multi-step forecasting head predicting 6 months ahead.
+  - Monte Carlo Dropout wrapper enabling uncertainty bounds estimation at inference time without needing retraining.
+
+#### [NEW] [src/models/train.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/models/train.py)
+- Complete training loop:
+  - Loss functions: MSE + Pinball / Quantile loss for calibration.
+  - Optimizer: AdamW with weight decay and gradient clipping.
+  - Learning rate scheduler: ReduceLROnPlateau.
+  - Early stopping and model checkpoint saving (`checkpoints/best_model.pt`).
+
+#### [NEW] [src/models/evaluate.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/models/evaluate.py)
+- Evaluation and hydrogeological benchmarking:
+  - Nash-Sutcliffe Efficiency (NSE) — standard gold standard in hydrological forecasting.
+  - Kling-Gupta Efficiency (KGE).
+  - Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE).
+  - Prediction Interval Coverage Probability (PICP) and Mean Prediction Interval Width (MPIW) for $P_{10}-P_{90}$ intervals.
+
+#### [NEW] [src/inference/predict.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/inference/predict.py)
+- Full inference pipeline:
+  - Runs Monte Carlo Dropout ($N=100$) over test wells to generate median ($P_{50}$), conservative high-risk ($P_{10}$), and optimistic low-risk ($P_{90}$) groundwater level projections.
+
+#### [NEW] [src/inference/risk_tiering.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/inference/risk_tiering.py)
+- Hydrogeological risk classifier:
+  - Evaluates forecast depth against well-specific historical percentiles:
+    - High Risk: Forecast level $< 10\text{th}$ percentile of historical record (imminent pump intake breach).
+    - Medium Risk: Forecast level between $10\text{th}$ and $25\text{th}$ percentile.
+    - Low Risk: Forecast level $> 25\text{th}$ percentile.
+  - Calculates combined drought + water quality risk index (flagging wells where water table drop concentrates Arsenic, Uranium, or Methane).
+
+#### [NEW] [src/export/export_figures.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/export/export_figures.py)
+- Dedicated Matplotlib/Seaborn visualization pipeline generating all 5 publication-ready PNG/SVG figures:
+  - Forecast hydrographs with Monte Carlo Dropout uncertainty bands.
+  - Spatial New Brunswick risk map with geochemical overlays.
+  - Loss & convergence curves.
+  - Lag correlation matrix.
+  - Drought risk distribution summary.
+
+#### [NEW] [src/export/export_dashboard.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/export/export_dashboard.py)
+- Exporter module generating:
+  - `data/processed_wells.json`: Contains real NB well coordinates, construction depths, aquifer types, geochemical flags, baseline levels, and LSTM 6-month forecasted trajectories ($P_{10}, P_{50}, P_{90}$).
+  - `data/pipeline_summary.json`: Province-wide summary statistics (total monitored wells, count in high drought risk, count in combined geo-risk, overall model RMSE, NSE).
+
+---
+
+### 3. Orchestrator & CLI
+
+#### [NEW] [run_pipeline.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/run_pipeline.py)
+- Unified CLI to execute individual pipeline stages or end-to-end:
+  - `python run_pipeline.py --stage ingest`
+  - `python run_pipeline.py --stage preprocess`
+  - `python run_pipeline.py --stage train`
+  - `python run_pipeline.py --stage evaluate`
+  - `python run_pipeline.py --stage infer`
+  - `python run_pipeline.py --stage export` (exports both data JSON and image figures)
+  - `python run_pipeline.py --all`
+
+---
+
+### 4. Web Dashboard Enhancements
+
+#### [MODIFY] [script.js](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/script.js)
+- Update to fetch and load `data/processed_wells.json` and `data/pipeline_summary.json`.
+- Provide smooth, seamless fallback to synthetic generator if opened directly via local `file://` protocol where CORS restricts `fetch()`.
+- Update metrics cards dynamically based on the pipeline's real summary stats.
+- Wire water quality filters to dynamically update map markers based on the live Arsenic, Uranium, and Methane flags.
+
+#### [MODIFY] [.gitignore](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/.gitignore)
+- Ignore checkpoints, `__pycache__`, raw cache files, and the accidental nested `Aqua-Predict-NB/` folder.
+
+---
+
+### 5. Automated Testing Suite (`tests/`)
+
+#### [NEW] [tests/test_data_pipeline.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/tests/test_data_pipeline.py)
+- Tests data ingestion, feature generation, rolling metrics, and sequence creation.
+
+#### [NEW] [tests/test_model.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/tests/test_model.py)
+- Tests PyTorch LSTM forward pass, static covariate fusion, Monte Carlo Dropout inference shapes, and loss functions.
+
+#### [NEW] [tests/test_end_to_end.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/tests/test_end_to_end.py)
+- Full end-to-end integration test running the pipeline and verifying the exported dashboard JSON schema and generated figure images.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+1. Install requirements and run the test suite:
+   ```powershell
+   python -m unittest discover -s tests -p "test_*.py"
+   ```
+2. Execute the complete end-to-end pipeline:
+   ```powershell
+   python run_pipeline.py --all
+   ```
+3. Check outputs:
+   - Model checkpoint exists: `checkpoints/best_model.pt`
+   - Evaluation metrics log exists and shows valid RMSE ($< 0.35$ m) and positive NSE ($> 0.70$).
+   - Exported data exists: `data/processed_wells.json` and `data/pipeline_summary.json`.
+   - Exported image figures exist in `outputs/figures/`:
+     - `hydrographs_with_uncertainty.png`
+     - `provincial_drought_risk_map.png`
+     - `training_validation_curves.png`
+     - `meteorological_lag_correlations.png`
+     - `risk_tier_summary.png`
+
+### Manual & Visual Verification
+1. Open dashboard via browser subagent or local HTTP server (`python -m http.server 8000`).
+2. Verify:
+   - Map renders well markers across NB with accurate risk colors (red/orange/green).
+   - Clicking any well displays real LSTM forecast time series with $P_{10}, P_{50}, P_{90}$ bounds.
+   - Metrics cards display live pipeline metrics (Total Wells, High Drought Risk count, Geo-Risk count, Model RMSE).
+   - Filtering by Risk Level and Water Quality Threat updates the active markers correctly.
+   - View generated figure images to confirm high visual quality and hydrogeological clarity.

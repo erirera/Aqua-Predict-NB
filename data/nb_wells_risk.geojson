@@ -1,0 +1,3155 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.00464,
+          46.35483
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1000",
+        "county": "York",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 148,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -6.42,
+        "min_forecast_p50_m": -6.389,
+        "min_forecast_p10_m": -6.84
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.63473,
+          46.2064
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1001",
+        "county": "Westmorland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 107,
+        "risk": "low",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -8.01,
+        "min_forecast_p50_m": -7.837,
+        "min_forecast_p10_m": -8.129
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.25584,
+          45.26128
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1002",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 146,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -14.42,
+        "min_forecast_p50_m": -14.032,
+        "min_forecast_p10_m": -14.683
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.14405,
+          45.74053
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1003",
+        "county": "Kings",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 115,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -8.68,
+        "min_forecast_p50_m": -8.623,
+        "min_forecast_p10_m": -8.815
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.66195,
+          46.58308
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1004",
+        "county": "Northumberland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 50,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.89,
+        "min_forecast_p50_m": -10.581,
+        "min_forecast_p10_m": -10.782
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.45852,
+          47.92807
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1005",
+        "county": "Gloucester",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 132,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -5.53,
+        "min_forecast_p50_m": -5.196,
+        "min_forecast_p10_m": -5.888
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.73853,
+          47.2139
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1006",
+        "county": "Madawaska",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 79,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.37,
+        "min_forecast_p50_m": -10.369,
+        "min_forecast_p10_m": -10.498
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.55477,
+          46.57311
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1007",
+        "county": "Carleton",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 78,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -14.82,
+        "min_forecast_p50_m": -14.552,
+        "min_forecast_p10_m": -15.177
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.77492,
+          45.80375
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1008",
+        "county": "Albert",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 122,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -4.97,
+        "min_forecast_p50_m": -4.86,
+        "min_forecast_p10_m": -5.374
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.93474,
+          45.36824
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1009",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 54,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -16.41,
+        "min_forecast_p50_m": -16.206,
+        "min_forecast_p10_m": -17.516
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.25044,
+          47.82308
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1010",
+        "county": "Restigouche",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 52,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -8.97,
+        "min_forecast_p50_m": -8.668,
+        "min_forecast_p10_m": -8.86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.63761,
+          47.09608
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1011",
+        "county": "Victoria",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 102,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -4.79,
+        "min_forecast_p50_m": -4.862,
+        "min_forecast_p10_m": -5.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.4745,
+          45.97945
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1012",
+        "county": "Sunbury",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 103,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -4.5,
+        "min_forecast_p50_m": -4.13,
+        "min_forecast_p10_m": -5.012
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.91543,
+          46.14849
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1013",
+        "county": "Queens",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 103,
+        "risk": "low",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -11.21,
+        "min_forecast_p50_m": -11.134,
+        "min_forecast_p10_m": -11.304
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.93388,
+          46.7642
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1014",
+        "county": "Kent",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 50,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -15.58,
+        "min_forecast_p50_m": -15.454,
+        "min_forecast_p10_m": -16.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.18271,
+          46.2439
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1015",
+        "county": "York",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 82,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -14.39,
+        "min_forecast_p50_m": -14.287,
+        "min_forecast_p10_m": -15.187
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.01413,
+          46.00546
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1016",
+        "county": "Westmorland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 59,
+        "risk": "low",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -9.1,
+        "min_forecast_p50_m": -9.012,
+        "min_forecast_p10_m": -9.195
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.52238,
+          45.36117
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1017",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 62,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -8.32,
+        "min_forecast_p50_m": -8.01,
+        "min_forecast_p10_m": -8.314
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.31752,
+          45.536
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1018",
+        "county": "Kings",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 69,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -5.83,
+        "min_forecast_p50_m": -5.759,
+        "min_forecast_p10_m": -6.283
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.54041,
+          46.92394
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1019",
+        "county": "Northumberland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 108,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -16.37,
+        "min_forecast_p50_m": -15.784,
+        "min_forecast_p10_m": -16.893
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.47279,
+          47.61176
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1020",
+        "county": "Gloucester",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 137,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -6.69,
+        "min_forecast_p50_m": -6.465,
+        "min_forecast_p10_m": -6.824
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.88055,
+          47.72533
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1021",
+        "county": "Madawaska",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 135,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.11,
+        "min_forecast_p50_m": -10.088,
+        "min_forecast_p10_m": -10.197
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.37279,
+          46.13849
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1022",
+        "county": "Carleton",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 108,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -4.39,
+        "min_forecast_p50_m": -4.143,
+        "min_forecast_p10_m": -5.11
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.95112,
+          45.93377
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1023",
+        "county": "Albert",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 63,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -3.98,
+        "min_forecast_p50_m": -3.907,
+        "min_forecast_p10_m": -4.753
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.83184,
+          45.03595
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1024",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 123,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -7.85,
+        "min_forecast_p50_m": -7.882,
+        "min_forecast_p10_m": -8.128
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.40846,
+          47.5435
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1025",
+        "county": "Restigouche",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 76,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.48,
+        "min_forecast_p50_m": -10.292,
+        "min_forecast_p10_m": -10.453
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.35433,
+          46.82335
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1026",
+        "county": "Victoria",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 128,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.11,
+        "min_forecast_p50_m": -9.992,
+        "min_forecast_p10_m": -10.139
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.68684,
+          45.94024
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1027",
+        "county": "Sunbury",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 65,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -15.56,
+        "min_forecast_p50_m": -15.428,
+        "min_forecast_p10_m": -16.106
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.83903,
+          46.14336
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1028",
+        "county": "Queens",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 44,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.55,
+        "min_forecast_p50_m": -10.338,
+        "min_forecast_p10_m": -10.485
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.33677,
+          46.54195
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1029",
+        "county": "Kent",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 51,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -11.49,
+        "min_forecast_p50_m": -11.16,
+        "min_forecast_p10_m": -11.385
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.70095,
+          46.16036
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1030",
+        "county": "York",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 110,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -13.78,
+        "min_forecast_p50_m": -13.644,
+        "min_forecast_p10_m": -14.201
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.60907,
+          46.00662
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1031",
+        "county": "Westmorland",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 112,
+        "risk": "low",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -9.06,
+        "min_forecast_p50_m": -8.552,
+        "min_forecast_p10_m": -8.758
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.23528,
+          45.31931
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1032",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 136,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -9.64,
+        "min_forecast_p50_m": -9.491,
+        "min_forecast_p10_m": -9.678
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.6229,
+          45.82741
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1033",
+        "county": "Kings",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 107,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -13.66,
+        "min_forecast_p50_m": -13.547,
+        "min_forecast_p10_m": -14.197
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.90439,
+          46.6896
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1034",
+        "county": "Northumberland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 81,
+        "risk": "low",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -6.08,
+        "min_forecast_p50_m": -5.568,
+        "min_forecast_p10_m": -6.339
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.87386,
+          47.82754
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1035",
+        "county": "Gloucester",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 48,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -9.13,
+        "min_forecast_p50_m": -8.846,
+        "min_forecast_p10_m": -8.976
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.01914,
+          47.37274
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1036",
+        "county": "Madawaska",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 64,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -5.29,
+        "min_forecast_p50_m": -5.108,
+        "min_forecast_p10_m": -5.676
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.24106,
+          46.43183
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1037",
+        "county": "Carleton",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 79,
+        "risk": "low",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -6.03,
+        "min_forecast_p50_m": -5.685,
+        "min_forecast_p10_m": -6.212
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.07423,
+          45.90134
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1038",
+        "county": "Albert",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 44,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -14.45,
+        "min_forecast_p50_m": -14.466,
+        "min_forecast_p10_m": -15.228
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.86115,
+          45.40442
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1039",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 150,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -11.53,
+        "min_forecast_p50_m": -11.565,
+        "min_forecast_p10_m": -11.814
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.08781,
+          47.59557
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1040",
+        "county": "Restigouche",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 51,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.35,
+        "min_forecast_p50_m": -9.926,
+        "min_forecast_p10_m": -10.088
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.87341,
+          46.97752
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1041",
+        "county": "Victoria",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 88,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -13.05,
+        "min_forecast_p50_m": -12.911,
+        "min_forecast_p10_m": -13.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.38895,
+          45.61968
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1042",
+        "county": "Sunbury",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 120,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -4.84,
+        "min_forecast_p50_m": -4.522,
+        "min_forecast_p10_m": -5.35
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.08954,
+          45.63825
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1043",
+        "county": "Queens",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 118,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -7.85,
+        "min_forecast_p50_m": -7.813,
+        "min_forecast_p10_m": -8.045
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.62335,
+          46.68326
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1044",
+        "county": "Kent",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 123,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -11.87,
+        "min_forecast_p50_m": -11.672,
+        "min_forecast_p10_m": -11.959
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.32456,
+          46.34752
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1045",
+        "county": "York",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 109,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -7.72,
+        "min_forecast_p50_m": -7.585,
+        "min_forecast_p10_m": -7.874
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.03337,
+          45.9725
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1046",
+        "county": "Westmorland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 113,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -14.49,
+        "min_forecast_p50_m": -14.028,
+        "min_forecast_p10_m": -14.841
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.81927,
+          45.38477
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1047",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 80,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -15.64,
+        "min_forecast_p50_m": -15.452,
+        "min_forecast_p10_m": -16.475
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.81484,
+          45.44129
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1048",
+        "county": "Kings",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 53,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -15.04,
+        "min_forecast_p50_m": -15.136,
+        "min_forecast_p10_m": -15.896
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.23967,
+          47.11676
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1049",
+        "county": "Northumberland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 129,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -4.03,
+        "min_forecast_p50_m": -3.923,
+        "min_forecast_p10_m": -4.903
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.93941,
+          47.75344
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1050",
+        "county": "Gloucester",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 120,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -3.96,
+        "min_forecast_p50_m": -3.77,
+        "min_forecast_p10_m": -4.951
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.69092,
+          47.39916
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1051",
+        "county": "Madawaska",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 120,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -3.75,
+        "min_forecast_p50_m": -3.934,
+        "min_forecast_p10_m": -5.295
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.65877,
+          46.08383
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1052",
+        "county": "Carleton",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 91,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -15.44,
+        "min_forecast_p50_m": -15.417,
+        "min_forecast_p10_m": -16.201
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.0581,
+          45.90062
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1053",
+        "county": "Albert",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 71,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -5.06,
+        "min_forecast_p50_m": -4.787,
+        "min_forecast_p10_m": -5.744
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.67147,
+          45.49867
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1054",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 75,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -12.06,
+        "min_forecast_p50_m": -12.097,
+        "min_forecast_p10_m": -12.426
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.93192,
+          47.69246
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1055",
+        "county": "Restigouche",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 64,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -11.28,
+        "min_forecast_p50_m": -11.033,
+        "min_forecast_p10_m": -11.203
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.53102,
+          47.14983
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1056",
+        "county": "Victoria",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 56,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -15.71,
+        "min_forecast_p50_m": -15.553,
+        "min_forecast_p10_m": -16.41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.62995,
+          45.78705
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1057",
+        "county": "Sunbury",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 56,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -7.33,
+        "min_forecast_p50_m": -7.21,
+        "min_forecast_p10_m": -7.594
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.99643,
+          45.88107
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1058",
+        "county": "Queens",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 81,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -13.95,
+        "min_forecast_p50_m": -13.939,
+        "min_forecast_p10_m": -14.693
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.82769,
+          46.83131
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1059",
+        "county": "Kent",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 102,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -15.42,
+        "min_forecast_p50_m": -15.412,
+        "min_forecast_p10_m": -16.114
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.0592,
+          46.29506
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1060",
+        "county": "York",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 131,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -12.06,
+        "min_forecast_p50_m": -12.081,
+        "min_forecast_p10_m": -12.448
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.0757,
+          46.31443
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1061",
+        "county": "Westmorland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 75,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.76,
+        "min_forecast_p50_m": -10.558,
+        "min_forecast_p10_m": -10.711
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.89189,
+          45.1567
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1062",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 51,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -12.13,
+        "min_forecast_p50_m": -11.952,
+        "min_forecast_p10_m": -12.321
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.54923,
+          45.7179
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1063",
+        "county": "Kings",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 116,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -9.43,
+        "min_forecast_p50_m": -9.412,
+        "min_forecast_p10_m": -9.543
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.85446,
+          46.83389
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1064",
+        "county": "Northumberland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 81,
+        "risk": "low",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -8.19,
+        "min_forecast_p50_m": -8.083,
+        "min_forecast_p10_m": -8.299
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.82501,
+          47.3436
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1065",
+        "county": "Gloucester",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 85,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -15.42,
+        "min_forecast_p50_m": -15.526,
+        "min_forecast_p10_m": -16.475
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.34163,
+          47.65453
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1066",
+        "county": "Madawaska",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 85,
+        "risk": "low",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -11.38,
+        "min_forecast_p50_m": -10.947,
+        "min_forecast_p10_m": -11.191
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.65207,
+          46.19443
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1067",
+        "county": "Carleton",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 108,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -4.65,
+        "min_forecast_p50_m": -4.541,
+        "min_forecast_p10_m": -5.317
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68679,
+          45.78017
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1068",
+        "county": "Albert",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 57,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -7.37,
+        "min_forecast_p50_m": -7.104,
+        "min_forecast_p10_m": -7.447
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.52935,
+          45.40727
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1069",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 115,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -6.83,
+        "min_forecast_p50_m": -6.903,
+        "min_forecast_p10_m": -7.301
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.99241,
+          47.85802
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1070",
+        "county": "Restigouche",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 93,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -6.02,
+        "min_forecast_p50_m": -5.934,
+        "min_forecast_p10_m": -6.369
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.84106,
+          46.63033
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1071",
+        "county": "Victoria",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 118,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -9.21,
+        "min_forecast_p50_m": -9.109,
+        "min_forecast_p10_m": -9.222
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.20905,
+          45.98961
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1072",
+        "county": "Sunbury",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 135,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -6.3,
+        "min_forecast_p50_m": -6.124,
+        "min_forecast_p10_m": -6.694
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.87526,
+          45.73495
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1073",
+        "county": "Queens",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 85,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -12.89,
+        "min_forecast_p50_m": -12.834,
+        "min_forecast_p10_m": -13.145
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.74042,
+          46.6177
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1074",
+        "county": "Kent",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 98,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -5.46,
+        "min_forecast_p50_m": -5.161,
+        "min_forecast_p10_m": -6.059
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.49082,
+          45.75045
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1075",
+        "county": "York",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 48,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -5.9,
+        "min_forecast_p50_m": -5.615,
+        "min_forecast_p10_m": -6.305
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.1015,
+          46.10202
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1076",
+        "county": "Westmorland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 108,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -15.11,
+        "min_forecast_p50_m": -14.924,
+        "min_forecast_p10_m": -15.472
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.5098,
+          45.39296
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1077",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 106,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -13.33,
+        "min_forecast_p50_m": -13.047,
+        "min_forecast_p10_m": -13.711
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.9825,
+          45.5367
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1078",
+        "county": "Kings",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 129,
+        "risk": "low",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -10.04,
+        "min_forecast_p50_m": -9.914,
+        "min_forecast_p10_m": -10.004
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.34369,
+          47.16624
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1079",
+        "county": "Northumberland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 47,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -3.96,
+        "min_forecast_p50_m": -4.036,
+        "min_forecast_p10_m": -4.657
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.4806,
+          47.52986
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1080",
+        "county": "Gloucester",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 71,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -8.45,
+        "min_forecast_p50_m": -8.156,
+        "min_forecast_p10_m": -8.413
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.48083,
+          47.6275
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1081",
+        "county": "Madawaska",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 75,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -7.67,
+        "min_forecast_p50_m": -7.52,
+        "min_forecast_p10_m": -7.838
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.50917,
+          46.15469
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1082",
+        "county": "Carleton",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 106,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -8.06,
+        "min_forecast_p50_m": -7.74,
+        "min_forecast_p10_m": -8.087
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.8585,
+          45.95493
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1083",
+        "county": "Albert",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 121,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -12.19,
+        "min_forecast_p50_m": -12.001,
+        "min_forecast_p10_m": -12.326
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.12587,
+          45.52768
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1084",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 110,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -6.82,
+        "min_forecast_p50_m": -6.515,
+        "min_forecast_p10_m": -6.894
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.27231,
+          47.88636
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1085",
+        "county": "Restigouche",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 138,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -14.36,
+        "min_forecast_p50_m": -13.931,
+        "min_forecast_p10_m": -14.509
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.60025,
+          46.87218
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1086",
+        "county": "Victoria",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 81,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -6.87,
+        "min_forecast_p50_m": -6.761,
+        "min_forecast_p10_m": -7.339
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.11763,
+          45.59836
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1087",
+        "county": "Sunbury",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 54,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -14.08,
+        "min_forecast_p50_m": -13.897,
+        "min_forecast_p10_m": -14.571
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.71819,
+          45.86764
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1088",
+        "county": "Queens",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 72,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -4.48,
+        "min_forecast_p50_m": -4.224,
+        "min_forecast_p10_m": -4.99
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.27673,
+          46.75204
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1089",
+        "county": "Kent",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 62,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -6.5,
+        "min_forecast_p50_m": -6.322,
+        "min_forecast_p10_m": -6.959
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.77825,
+          45.66961
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1090",
+        "county": "York",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 142,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -14.49,
+        "min_forecast_p50_m": -14.383,
+        "min_forecast_p10_m": -15.102
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.53731,
+          45.94652
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1091",
+        "county": "Westmorland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 62,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -13.97,
+        "min_forecast_p50_m": -13.977,
+        "min_forecast_p10_m": -14.457
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.25849,
+          45.26455
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1092",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 133,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -6.44,
+        "min_forecast_p50_m": -6.292,
+        "min_forecast_p10_m": -6.857
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.86823,
+          45.57424
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1093",
+        "county": "Kings",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 67,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -9.26,
+        "min_forecast_p50_m": -9.202,
+        "min_forecast_p10_m": -9.463
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.88986,
+          46.5327
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1094",
+        "county": "Northumberland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 114,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -3.66,
+        "min_forecast_p50_m": -3.46,
+        "min_forecast_p10_m": -4.545
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.74122,
+          47.58753
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1095",
+        "county": "Gloucester",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 80,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -8.77,
+        "min_forecast_p50_m": -8.546,
+        "min_forecast_p10_m": -8.776
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.80894,
+          47.49401
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1096",
+        "county": "Madawaska",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 96,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -12.47,
+        "min_forecast_p50_m": -12.291,
+        "min_forecast_p10_m": -12.573
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.67933,
+          46.35207
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1097",
+        "county": "Carleton",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 72,
+        "risk": "low",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -12.75,
+        "min_forecast_p50_m": -12.444,
+        "min_forecast_p10_m": -12.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.54186,
+          45.78642
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1098",
+        "county": "Albert",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 117,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -4.7,
+        "min_forecast_p50_m": -4.16,
+        "min_forecast_p10_m": -5.039
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.42244,
+          45.45649
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1099",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 130,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -14.13,
+        "min_forecast_p50_m": -13.927,
+        "min_forecast_p10_m": -14.673
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.90458,
+          47.55006
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1100",
+        "county": "Restigouche",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 132,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -16.4,
+        "min_forecast_p50_m": -15.998,
+        "min_forecast_p10_m": -17.04
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.78645,
+          47.00232
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1101",
+        "county": "Victoria",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 38,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -6.12,
+        "min_forecast_p50_m": -5.736,
+        "min_forecast_p10_m": -6.565
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.64967,
+          45.90647
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1102",
+        "county": "Sunbury",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 61,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -5.52,
+        "min_forecast_p50_m": -5.301,
+        "min_forecast_p10_m": -6.152
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.73003,
+          46.10934
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1103",
+        "county": "Queens",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 79,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -12.48,
+        "min_forecast_p50_m": -12.492,
+        "min_forecast_p10_m": -12.899
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.22991,
+          46.78859
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1104",
+        "county": "Kent",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 97,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -16.0,
+        "min_forecast_p50_m": -15.984,
+        "min_forecast_p10_m": -17.078
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.29984,
+          45.94551
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1105",
+        "county": "York",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 66,
+        "risk": "low",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -11.27,
+        "min_forecast_p50_m": -11.091,
+        "min_forecast_p10_m": -11.289
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.04654,
+          45.94249
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1106",
+        "county": "Westmorland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 55,
+        "risk": "low",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -11.93,
+        "min_forecast_p50_m": -11.69,
+        "min_forecast_p10_m": -11.981
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.15424,
+          45.39565
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1107",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 117,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -6.61,
+        "min_forecast_p50_m": -6.321,
+        "min_forecast_p10_m": -6.753
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.47695,
+          45.61279
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1108",
+        "county": "Kings",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 62,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -13.98,
+        "min_forecast_p50_m": -14.05,
+        "min_forecast_p10_m": -14.761
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.68625,
+          47.36827
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1109",
+        "county": "Northumberland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 147,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -8.38,
+        "min_forecast_p50_m": -8.308,
+        "min_forecast_p10_m": -8.542
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.99149,
+          47.89725
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1110",
+        "county": "Gloucester",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 94,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -3.85,
+        "min_forecast_p50_m": -3.568,
+        "min_forecast_p10_m": -4.749
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.8798,
+          47.25977
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1111",
+        "county": "Madawaska",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 118,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -14.13,
+        "min_forecast_p50_m": -13.855,
+        "min_forecast_p10_m": -14.741
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.44224,
+          46.29695
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1112",
+        "county": "Carleton",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 87,
+        "risk": "low",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -13.04,
+        "min_forecast_p50_m": -12.811,
+        "min_forecast_p10_m": -13.191
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.96791,
+          45.7685
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1113",
+        "county": "Albert",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 116,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -5.02,
+        "min_forecast_p50_m": -5.032,
+        "min_forecast_p10_m": -5.817
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.73801,
+          45.10828
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1114",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 50,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -12.31,
+        "min_forecast_p50_m": -12.287,
+        "min_forecast_p10_m": -12.746
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.05793,
+          47.76659
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1115",
+        "county": "Restigouche",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 40,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.13,
+        "min_forecast_p50_m": -9.986,
+        "min_forecast_p10_m": -10.131
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.39506,
+          47.03513
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1116",
+        "county": "Victoria",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 57,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -5.72,
+        "min_forecast_p50_m": -5.635,
+        "min_forecast_p10_m": -6.455
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.47039,
+          45.77874
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1117",
+        "county": "Sunbury",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 123,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -12.64,
+        "min_forecast_p50_m": -12.366,
+        "min_forecast_p10_m": -12.675
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.06892,
+          45.74903
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1118",
+        "county": "Queens",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 92,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -7.61,
+        "min_forecast_p50_m": -7.49,
+        "min_forecast_p10_m": -7.78
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.08613,
+          46.50078
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1119",
+        "county": "Kent",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 44,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -5.03,
+        "min_forecast_p50_m": -4.657,
+        "min_forecast_p10_m": -5.561
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.00516,
+          46.17015
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1120",
+        "county": "York",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 127,
+        "risk": "medium",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -9.11,
+        "min_forecast_p50_m": -8.978,
+        "min_forecast_p10_m": -9.123
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.49362,
+          46.03054
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1121",
+        "county": "Westmorland",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 103,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -14.34,
+        "min_forecast_p50_m": -14.074,
+        "min_forecast_p10_m": -14.721
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.61972,
+          45.32443
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1122",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 78,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -11.8,
+        "min_forecast_p50_m": -11.619,
+        "min_forecast_p10_m": -11.847
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.06452,
+          45.76512
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1123",
+        "county": "Kings",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 107,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -13.74,
+        "min_forecast_p50_m": -13.591,
+        "min_forecast_p10_m": -14.092
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.24513,
+          47.39689
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1124",
+        "county": "Northumberland",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 80,
+        "risk": "high",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -14.18,
+        "min_forecast_p50_m": -13.91,
+        "min_forecast_p10_m": -14.524
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.31277,
+          47.63179
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1125",
+        "county": "Gloucester",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 39,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -6.87,
+        "min_forecast_p50_m": -6.279,
+        "min_forecast_p10_m": -7.075
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.24805,
+          47.58861
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1126",
+        "county": "Madawaska",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 126,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -7.55,
+        "min_forecast_p50_m": -7.307,
+        "min_forecast_p10_m": -7.596
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.79386,
+          46.09554
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1127",
+        "county": "Carleton",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 81,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -13.19,
+        "min_forecast_p50_m": -12.864,
+        "min_forecast_p10_m": -13.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.69891,
+          45.82265
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1128",
+        "county": "Albert",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 63,
+        "risk": "low",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -9.68,
+        "min_forecast_p50_m": -9.511,
+        "min_forecast_p10_m": -9.652
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.23739,
+          45.32042
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1129",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 74,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -14.24,
+        "min_forecast_p50_m": -14.108,
+        "min_forecast_p10_m": -14.791
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.76719,
+          47.5207
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1130",
+        "county": "Restigouche",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 69,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -4.6,
+        "min_forecast_p50_m": -4.495,
+        "min_forecast_p10_m": -5.67
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.85126,
+          46.89794
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1131",
+        "county": "Victoria",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 69,
+        "risk": "low",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -6.72,
+        "min_forecast_p50_m": -6.301,
+        "min_forecast_p10_m": -6.825
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.2845,
+          45.92545
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1132",
+        "county": "Sunbury",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 93,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -13.84,
+        "min_forecast_p50_m": -13.58,
+        "min_forecast_p10_m": -13.883
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.00853,
+          45.97293
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1133",
+        "county": "Queens",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 44,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -11.43,
+        "min_forecast_p50_m": -11.338,
+        "min_forecast_p10_m": -11.57
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.39313,
+          46.82957
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1134",
+        "county": "Kent",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 135,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -9.14,
+        "min_forecast_p50_m": -8.979,
+        "min_forecast_p10_m": -9.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.08408,
+          46.20608
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1135",
+        "county": "York",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 87,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -6.09,
+        "min_forecast_p50_m": -6.089,
+        "min_forecast_p10_m": -6.646
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.37443,
+          46.26693
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1136",
+        "county": "Westmorland",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 96,
+        "risk": "low",
+        "quality_threat": "Uranium",
+        "baseline_gwl_m": -8.04,
+        "min_forecast_p50_m": -7.803,
+        "min_forecast_p10_m": -8.051
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.95676,
+          45.16875
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1137",
+        "county": "Saint John",
+        "aquifer": "Glaciofluvial Sand/Gravel",
+        "depth_m": 61,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -15.58,
+        "min_forecast_p50_m": -15.396,
+        "min_forecast_p10_m": -16.29
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.33264,
+          45.60554
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1138",
+        "county": "Kings",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 103,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -15.25,
+        "min_forecast_p50_m": -15.171,
+        "min_forecast_p10_m": -15.992
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.14401,
+          47.24509
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1139",
+        "county": "Northumberland",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 142,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -10.4,
+        "min_forecast_p50_m": -10.237,
+        "min_forecast_p10_m": -10.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.79576,
+          47.4605
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1140",
+        "county": "Gloucester",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 62,
+        "risk": "low",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -8.59,
+        "min_forecast_p50_m": -8.3,
+        "min_forecast_p10_m": -8.515
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.38721,
+          47.42106
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1141",
+        "county": "Madawaska",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 74,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -15.16,
+        "min_forecast_p50_m": -14.935,
+        "min_forecast_p10_m": -15.877
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.52941,
+          46.4874
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1142",
+        "county": "Carleton",
+        "aquifer": "Windsor Group Karst",
+        "depth_m": 100,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -13.53,
+        "min_forecast_p50_m": -13.223,
+        "min_forecast_p10_m": -13.88
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.87956,
+          45.75286
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1143",
+        "county": "Albert",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 116,
+        "risk": "low",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -7.61,
+        "min_forecast_p50_m": -7.282,
+        "min_forecast_p10_m": -7.71
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.20148,
+          45.27557
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1144",
+        "county": "Charlotte",
+        "aquifer": "Mafic Volcanic",
+        "depth_m": 118,
+        "risk": "high",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -7.86,
+        "min_forecast_p50_m": -7.672,
+        "min_forecast_p10_m": -7.949
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.82152,
+          47.5174
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1145",
+        "county": "Restigouche",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 113,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -7.88,
+        "min_forecast_p50_m": -7.812,
+        "min_forecast_p10_m": -8.119
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.4192,
+          46.80317
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1146",
+        "county": "Victoria",
+        "aquifer": "Fractured Bedrock",
+        "depth_m": 128,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -11.4,
+        "min_forecast_p50_m": -11.299,
+        "min_forecast_p10_m": -11.499
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.46689,
+          45.57259
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1147",
+        "county": "Sunbury",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 86,
+        "risk": "low",
+        "quality_threat": "Arsenic",
+        "baseline_gwl_m": -8.89,
+        "min_forecast_p50_m": -8.756,
+        "min_forecast_p10_m": -8.933
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.09232,
+          45.73152
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1148",
+        "county": "Queens",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 81,
+        "risk": "high",
+        "quality_threat": "Methane",
+        "baseline_gwl_m": -14.03,
+        "min_forecast_p50_m": -13.872,
+        "min_forecast_p10_m": -14.351
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.6808,
+          46.5966
+        ]
+      },
+      "properties": {
+        "well_id": "NB-OWLS-1149",
+        "county": "Kent",
+        "aquifer": "Carboniferous Sandstone",
+        "depth_m": 92,
+        "risk": "high",
+        "quality_threat": NaN,
+        "baseline_gwl_m": -14.29,
+        "min_forecast_p50_m": -14.104,
+        "min_forecast_p10_m": -14.939
+      }
+    }
+  ]
+}
