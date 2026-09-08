@@ -1,0 +1,174 @@
+# Research & Publication Implementation Plan: Modular Frontier Pipelines
+
+This plan specifies the architecture and implementation for the next research phase of **Aqua-Predict-NB**, structured as a **Unified Core with Modular Frontier Pipelines**. 
+
+This architectural pattern eliminates redundant code while giving you complete research independence: each scientific frontier can be run, tuned, and plotted independently for its respective journal submission, while their combined outputs feed into a single, cohesive public health dashboard.
+
+---
+
+## Architectural Pattern: Unified Core + Modular Pipelines
+
+```
+                               ┌────────────────────────┐
+                               │  SHARED CORE ENGINE    │
+                               │  • Raw OWLS & ECCC     │
+                               │  • Feature Scalers     │
+                               │  • Trained LSTM (.pt)  │
+                               └───────────┬────────────┘
+                                           │
+         ┌─────────────────────────────────┼─────────────────────────────────┐
+         ▼                                 ▼                                 ▼
+┌──────────────────┐             ┌──────────────────┐             ┌──────────────────┐
+│  FRONTIER 1:     │             │  FRONTIER 2:     │             │  FRONTIER 3:     │
+│  Dynamic         │             │  Lithology Lag   │             │  Bayesian Intake │
+│  Geochemistry    │             │  Explainability  │             │  Breach Risk     │
+│  Pipeline        │             │  (XAI / SHAP)    │             │  Pipeline        │
+└────────┬─────────┘             └────────┬─────────┘             └────────┬─────────┘
+         │                                │                                │
+         ▼                                ▼                                ▼
+  Paper 1 Artifacts               Paper 2 Artifacts               Paper 3 Artifacts
+  • geochem_coupling.png          • lithology_xai.png             • intake_breach.png
+  • geochem_alerts.json           • xai_attributions.json         • failure_curves.json
+  (STOTEN / Hydrogeology J.)      (Computers & Geosciences)       (CWRJ)
+         │                                │                                │
+         └────────────────────────────────┼────────────────────────────────┘
+                                          ▼
+                         ┌─────────────────────────────────┐
+                         │   PUBLIC DASHBOARD AGGREGATOR   │
+                         │   (Unified web view for well    │
+                         │    owners & municipal planners) │
+                         └─────────────────────────────────┘
+```
+
+---
+
+## The Three Research Frontiers
+
+### Frontier 1: Dynamic Drawdown $\times$ Geochemical Trigger Pipeline
+* **Scientific Focus:** Modeling contaminant mobilization kinetics as a function of projected water table drop ($\Delta h$).
+  * **Arsenic (As):** Oxidation of arsenopyrite triggered when water table drops into the casing/bedrock interface.
+  * **Uranium (U) & Radon:** Leaching and stagnation concentration in low-yield granitic fractures during summer baseflow.
+  * **Methane (CH4):** Pressure-drop effervescence in Carboniferous organic shale basins.
+* **Target Journal:** *Science of The Total Environment (STOTEN)* or *Hydrogeology Journal*
+* **Public Outcome:** Proactive "Sample Before You Drink" alerts recommending specific certified lab testing (e.g., RPC New Brunswick).
+* **Dedicated Module:** `src/pipelines/pipeline_geochem.py`
+* **Artifacts Generated:**
+  * Figure: `outputs/figures/dynamic_geochemical_risk_coupling.png`
+  * Data: `data/geochem_advisories.json`
+
+---
+
+### Frontier 2: Lithology-Dependent Hydraulic Lag Explainability (XAI)
+* **Scientific Focus:** Demonstrating physical alignment of deep learning memory gates with New Brunswick aquifer hydrogeology using SHAP and Integrated Gradients.
+  * Appalachian fractured bedrock: 90–180 day non-linear hydraulic retention times.
+  * Carboniferous sandstone: 60–90 day buffered response.
+  * Glaciofluvial sand/gravel: rapid 15–30 day direct recharge response.
+  * Windsor group karst: non-linear conduit flow response.
+* **Target Journal:** *Computers & Geosciences* or *Hydrology and Earth System Sciences (HESS)*
+* **Public/Regulatory Outcome:** Demonstrating to provincial regulators (NB DELG and APEGNB) that the AI model learns genuine Darcy-like physics rather than statistical artifacts.
+* **Dedicated Module:** `src/pipelines/pipeline_xai.py`
+* **Artifacts Generated:**
+  * Figure: `outputs/figures/lithology_hydraulic_lags_xai.png`
+  * Data: `data/xai_attributions.json`
+
+---
+
+### Frontier 3: Bayesian Pump-Intake Breach & Drought Failure Pipeline
+* **Scientific Focus:** Translating 100-sample Monte Carlo Dropout distributions ($P_{10}, P_{50}, P_{90}$) into physical pump intake breach probabilities based on real NB OWLS driller casing depth records.
+  * Computes lead-time failure probabilities ($P(\text{GWL} \le z_{\text{intake}})$) at 1, 3, and 6 months.
+  * Calculates safety buffer in physical metres ($P_{50} - z_{\text{intake}}$ and $P_{10} - z_{\text{intake}}$).
+  * Evaluates survival curves under Atlantic Canada historical drought shocks (e.g., 2020 drought).
+* **Target Journal:** *Canadian Water Resources Journal (CWRJ)*
+* **Public Outcome:** Homeowner decision support: *"Your well intake is at 42m; model projects water table at 39.8m in August (2.2m safety margin, 24% failure risk)."*
+* **Dedicated Module:** `src/pipelines/pipeline_breach.py`
+* **Artifacts Generated:**
+  * Figure: `outputs/figures/pump_intake_breach_probabilities.png`
+  * Data: `data/intake_breach_risks.json`
+
+---
+
+## Implementation Details
+
+### 1. New Pipeline Modules (`src/pipelines/`)
+
+#### [NEW] [src/pipelines/__init__.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/pipelines/__init__.py)
+- Package initialization for research pipelines.
+
+#### [NEW] [src/pipelines/pipeline_geochem.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/pipelines/pipeline_geochem.py)
+- Standalone pipeline runnable via `python -m src.pipelines.pipeline_geochem` or `python run_pipeline.py --stage geochem`.
+- Computes dynamic *Joint Hazard Index* ($JHI$), generates testing advice strings, and produces `dynamic_geochemical_risk_coupling.png`.
+
+#### [NEW] [src/pipelines/pipeline_xai.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/pipelines/pipeline_xai.py)
+- Standalone pipeline runnable via `python -m src.pipelines.pipeline_xai` or `python run_pipeline.py --stage xai`.
+- Computes SHAP and gradient feature attribution grouped by aquifer lithology, producing `lithology_hydraulic_lags_xai.png`.
+
+#### [NEW] [src/pipelines/pipeline_breach.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/src/pipelines/pipeline_breach.py)
+- Standalone pipeline runnable via `python -m src.pipelines.pipeline_breach` or `python run_pipeline.py --stage breach`.
+- Evaluates Monte Carlo Dropout distributions against physical pump intake elevations from driller logs, producing `pump_intake_breach_probabilities.png`.
+
+---
+
+### 2. Master CLI Orchestration (`run_pipeline.py`)
+
+#### [MODIFY] [run_pipeline.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/run_pipeline.py)
+- Adds granular CLI stage flags allowing you to run each research frontier independently or combined:
+  ```powershell
+  python run_pipeline.py --stage geochem       # Run only Frontier 1 (Paper 1)
+  python run_pipeline.py --stage xai           # Run only Frontier 2 (Paper 2)
+  python run_pipeline.py --stage breach        # Run only Frontier 3 (Paper 3)
+  python run_pipeline.py --stage research-all  # Run all 3 frontiers
+  python run_pipeline.py --all                 # Base pipeline + all 3 research frontiers
+  ```
+
+---
+
+### 3. Interactive Web Dashboard Integration
+
+#### [MODIFY] [index.html](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/index.html)
+- Add a **Research Frontiers Modal / Tab** outlining the 3 pillars.
+- In the **Well Forecast Analysis** card:
+  - Add **Dynamic Contaminant Warning Badge** (Arsenic, Uranium, Methane mobilization risk with RPC NB testing advisory).
+  - Add **Intake Failure Risk Gauge** (showing remaining safety buffer metres and failure probability).
+  - Add **XAI Hydrogeological Drivers** micro-bar chart (showing whether 30-day or 180-day lags drive this well).
+
+#### [MODIFY] [script.js](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/script.js)
+- Asynchronously load `data/geochem_advisories.json`, `data/xai_attributions.json`, and `data/intake_breach_risks.json`.
+- Dynamically bind these fields when any well marker is clicked on the Leaflet map.
+
+---
+
+### 4. Automated Testing Suite
+
+#### [NEW] [tests/test_research_pipelines.py](file:///c:/Users/delef/.gemini/antigravity/Aqua-Predict-NB/tests/test_research_pipelines.py)
+- Automated unit tests validating:
+  - Geochemical risk scoring monotonicity with respect to water table decline.
+  - SHAP attribution matrix shape and convergence across lithologies.
+  - Pump intake failure probability math and boundary checks ($0.0 \le P \le 1.0$).
+
+---
+
+## Verification Plan
+
+### Automated Tests
+1. Run research unit test suite:
+   ```powershell
+   python -m unittest discover -s tests -p "test_research_pipelines.py"
+   ```
+2. Test individual frontier execution:
+   ```powershell
+   python run_pipeline.py --stage geochem
+   python run_pipeline.py --stage xai
+   python run_pipeline.py --stage breach
+   ```
+3. Verify all 3 publication figures are generated in `outputs/figures/`:
+   - `dynamic_geochemical_risk_coupling.png`
+   - `lithology_hydraulic_lags_xai.png`
+   - `pump_intake_breach_probabilities.png`
+
+### Browser / Dashboard Verification
+1. Open dashboard at `http://localhost:8000/index.html`.
+2. Click private wells across different counties (e.g., York vs. Westmorland vs. Gloucester).
+3. Confirm that clicking a well renders:
+   - Dynamic Geochemical Mobilization Alert (with lab testing guidance)
+   - Pump Intake Buffer & Breach Risk gauge
+   - XAI Feature Driver breakdown showing distinct hydraulic lags for that lithology
